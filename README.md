@@ -75,3 +75,61 @@ npm run test
 ## Submission
 Once the lab is complete, all tests are passing, and you've pushed the completed code to 
 your forked repo on GitHub, submit your GitHub repo through Canvas using CodeGrade.
+
+# Random Dog Images
+
+A React application that fetches and displays random dog images from the Dog CEO API.
+
+## Features
+
+- Displays a random dog image when the app first loads.
+- Fetches another image when the user clicks “Get New Dog.”
+- Shows a loading message while fetching data.
+- Displays an error message if a request fails.
+- Disables the button while a request is in progress.
+
+## Technologies Used
+
+- React
+- JavaScript and JSX
+- Fetch API
+- Dog CEO API
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal.
+
+## Running Tests
+
+```bash
+npm run test
+```
+
+## How It Works
+
+The App component uses useState to store the dog image URL,
+loading status, and error message. useEffect calls the fetching
+function when the component mounts. The button's onClick handler
+calls the same function to request another image.
+
+The application sends a GET request to:
+https://dog.ceo/api/breeds/image/random
+
+The response's message property contains the image URL, which
+is used as the image element's src.
+
+## Screenshot
+
+![Random Dog Images app](screenshots/random-dog.png)
